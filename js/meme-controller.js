@@ -1,6 +1,7 @@
 'use strict'
 
 const fonts = [
+    "Impact",
     "Arial",
     "Arial Narrow",
     "Arial Rounded MT Bold",
@@ -9,6 +10,10 @@ const fonts = [
     "Century",
     "Century Gothic",
     "Comic Sans MS",
+    "Georgia",
+    "Gentium",
+    "King",
+    "Lucida Console",
     "Lalit",
     "Modena",
     "Monotype Corsiva",
@@ -25,6 +30,7 @@ const fonts = [
     "fantasy",
     "default"
 ];
+
 
 // Canvas, context and touch events
 

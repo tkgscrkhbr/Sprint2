@@ -32,7 +32,6 @@ var gMeme = {
         }
     ]
 }
-var gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
 
 
 function getImgs(filter = '') {
@@ -175,7 +174,7 @@ function createImgs() {
     gImgs = [
         createImg(['trump']),
         createImg(['cute', 'puppies']),
-        createImg(['cute', 'puppy', 'baby']),
+        createImg(['butcher','you little c##t']),
         createImg(['drake']),
         createImg(['success', 'baby']),
         createImg(['woman', 'crying']),
@@ -185,7 +184,7 @@ function createImgs() {
         createImg(['mom','child']),
         createImg(['spongebob']),
         createImg(['who are we']),
-        createImg(['leonardo dicaprio', 'great gatsby', 'cheers']),
+        createImg(['great gatsby','cheers']),
         createImg(['matrix', 'morpheus']),
         createImg(['explain']),
         createImg(['thonk']),

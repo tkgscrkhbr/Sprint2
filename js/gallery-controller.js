@@ -20,7 +20,7 @@ function renderGallery() {
 }
 
 function renderSavedImgs() {
-    var imgs = getSavedImgs()
+    var imgs
     if (!imgs) return
     var strHTML = imgs.map(img =>
         `<img class='saved-img meme-img' src='${img.url}'></img>`
