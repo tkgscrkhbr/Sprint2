@@ -1,0 +1,348 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    cursor: default;
+    max-width: 100vw;
+
+    margin: 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.main-nav {
+    position: sticky;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 6.5vh;
+
+    width: 100%;
+
+    background-color: var(--header-color);
+
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 0.4);
+
+    z-index: 5;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 1em;
+
+    margin-inline-end: 1em;
+
+    cursor: pointer;
+}
+
+.nav-link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 70px;
+    max-height: 70px;
+    width: 50px;
+
+    line-height: 1em;
+
+    transition: font-size .3s;
+}
+
+.nav-link:hover {
+    font-size: 1.1em
+}
+
+/* GALLERY */
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    height: 5.5vh;
+
+    background-color: var(--secondary-header-color);
+}
+header img{
+    height: 98%;
+}
+
+.frequent-keywords {
+    display: flex;
+    gap: 20px;
+    margin-inline-end: 20px;
+}
+
+.search-input {
+    position: relative;
+
+    width: 140px;
+    height: 1.5em;
+    margin: 10px;
+
+    background: none;
+    border: none;
+
+    color: var(--text-color);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.search-input:focus-visible {
+    outline: none;
+
+    border-bottom: 1px solid var(--text-color);
+    transition: border 1s;
+}
+
+.search-input:-webkit-autofill,
+.search-input:-webkit-autofill:hover,
+.search-input:-webkit-autofill:focus-visible,
+.search-input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 40px var(--secondary-header-color) inset;
+    -webkit-text-fill-color: var(--text-color);
+}
+
+.input-search-icon {
+    position: absolute;
+    width: 20px;
+    left: 130px;
+}
+
+/* Hide the annoying datalist triangle */
+
+[list]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.gallery-filter-datalist {
+    width: 20px;
+}
+
+.btn-flexible {
+    font-family: inherit;
+    font-weight: 500;
+    width: 100px;
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    min-height: 50vh;
+    height: 100%;
+    max-height: calc(100vh - 10.5vh - 18.5vh - 18.5vh);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+    margin-inline: 10px;
+
+    margin-block: 10px;
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px rgb(128 128 128 / 0.3);
+    background-color: var(--secondary-header-color);
+    border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgb(160 160 160 / 0.3);
+}
+
+.meme-img {
+    object-fit: cover;
+    height: 120px;
+
+    border-radius: 10px;
+
+    transition: .2s;
+
+}
+
+.meme-img:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+.gallery-footer {
+    position: fixed;
+    bottom: 15vh;
+    right: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 18.5vh;
+    max-height: 400px;
+    background-color: var(--secondary-header-color);
+}
+
+
+/* Meme-Edit */
+
+.meme-editor {
+    position: relative;
+    height: 80.5vh;
+}
+
+.canvas-container {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    translate: -20% -30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 40vh;
+
+    padding: 20px;
+}
+
+canvas:focus {
+    outline: none;
+}
+
+.meme-edit-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    translate: 0 -50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 17vh;
+
+    min-width: 23w;
+    max-width: 40vw;
+
+    background-color: var(--secondary-header-color);
+
+    border-radius: 20px;
+    margin-inline: 50px;
+}
+
+.line-text {
+    height: 2em;
+    width: 250px;
+
+    margin-block-end: 5px;
+
+    border-radius: 5px;
+}
+
+.text-alignment-and-size,
+.color-font,
+.line-container,
+.save-download-container,
+.stickers-container  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+}
+
+
+input[type='color'] {
+    width: 27px;
+    border-radius: 8px;
+
+    margin: 5px;
+
+    box-shadow: 1px 1px 3px black;
+}
+
+.stickers-container {
+    background-color:var(--primary-color);
+    height:60px;
+
+    border-radius:30px;
+}
+
+.sticker {
+    font-size:1.5em;
+    /* width:50px;
+    height:50px; */
+}
+
+.btn-font-size {
+    width: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--header-color);
+    height: 15vh;
+
+}
+
+footer .logo {
+ height: 20px;
+}
+
+footer p {
+    margin-block: 10px;
+    font-family: 'Montserrat';
+    font-weight: 250;
+    font-size: 1.188em;
+}
+
+
+/* MISC */
+
+.btn {
+    padding: 5px;
+    margin: 5px;
+
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+    transition:background-color .3s;
+}
+
+.btn:hover {
+    background-color:rgb(255 255 255 / .6);
+    cursor: pointer;
+}

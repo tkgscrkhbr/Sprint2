@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <script src="https://kit.fontawesome.com/137b491d15.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="main-layout" onload="onInit()">
+
+    <header class="main-layout">
+        <nav class="main-nav">
+            <img src="meme-imgs/mememaker11.png" alt="">
+
+            <div class="nav-links">
+                <div class="nav-link" onclick="renderPage(this.innerText)">Gallery</div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="meme-gallery gallery page">
+        <section class="gallery-header">
+            <div class="filter-container">
+                <input list="gallery-filter" class="search-input" placeholder="Search"
+                    oninput="onFilter(value)">
+                <button class="btn btn-clear-filter" onclick="onClearFilter()">Clear</button>
+            </div>
+            <img class="input-search-icon" src="img/search.png" alt="magnifying-glass">
+            <button class="btn btn-flexible" onclick="onFlexible()">Suprise!!</button>
+            <!-- <input type="file" class="file-input btn" name="image" onchange="onUpload(event)" accept="image/*" /> -->
+        </section>
+
+        <section class="images-container">
+        </section>
+
+        <section class="gallery-footer">
+            </div>
+
+            </div>
+
+        </section>
+    </section>
+
+    <section class="saved-memes-container saved page" style="display:none">
+
+    </section>
+
+    <section class="meme-editor page" style="display:none">
+        <div class="meme-editor-page-container">
+            <div class="canvas-container">
+                <canvas width="250" height="250" tabindex='1'></canvas>
+            </div>
+            <div class="meme-edit-container" style="display:none">
+                <div class="text-container">
+                    <input class="line-text" type="text" placeholder="Enter your text here"
+                        oninput="onUpdateText(this.value)">
+                </div>
+                <div class="text-alignment-and-size">
+                    <button class="btn btn-font-size" onclick="onChangeFontSize(2)">A+</button>
+                    <button class="btn btn-font-size" onclick="onChangeFontSize(-2)">A-</button>
+                    <button class="btn btn-text-align" onclick="onChangeTextAlign('left')">left</button>
+                    <button class="btn btn-text-align" onclick="onChangeTextAlign('center')">center</button>
+                    <button class="btn btn-text-align" onclick="onChangeTextAlign('right')">right</button>
+                </div>
+                <div class="color-font">
+                    <input type="color" onchange="onChangeColor(value)" value="#ffffff">
+                    <select class="font-family-select" onchange="onChangeFontFamily(value)">
+                    </select>
+                </div>
+                <div class="line-container">
+                    <button class="btn add-line" onclick="onAddNewLine()">New Line</button>
+                    <button class="btn switch-line" onclick="onSwitchLine()">Switch Line</button>
+                    <button class="btn del-line" onclick="onDeleteLine()">Delete Line</button>
+                    <a href="" onclick="onDownloadImg(this)" download="my-img.jpg"><button type="button"
+                        class="btn btn-download">Download</button></a>
+                    </div>
+                </div>
+                <div class="save-download-container">
+                    
+                    <button style="display: none;" class="btn btn-save" onclick="onSaveImg()">Save</button>
+                
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <datalist class="gallery-filter-datalist" id="gallery-filter">
+        <option value=""></option>
+    </datalist>
+
+
+    <section class="about page" style="display:none;"></section>
+
+    <footer>
+        <img class="logo" src="meme-imgs/mememaker11.png" alt="">
+        <p>Elad Berliner</p>
+    </footer>
+</body>
+
+<script src="js/utils.js"></script>
+<script src="js/storage.service.js"></script>
+<script src="js/sharing-on-facebook.js"></script>
+<script src="js/meme-service.js"></script>
+<script src="js/meme-controller.js"></script>
+<script src="js/gallery-controller.js"></script>
+
+</html>
